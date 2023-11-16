@@ -39,21 +39,5 @@
       <p>Phone No.:- +91 99589 67946</p><p>Email Address:- <a href="mailto:guerrillateck@gmail.com?subject=Want%20enquire%20about%20the%20prices%20of%20your%20services." style="text-decoration:none;color:white;">guerrillateck@gmail.com</a></p>
       <h5 style="text-align:center;">© All rights reserved 2023, Guerilla Teck</h5>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail(){
-        Email.send({
-          Host : "smtp.gmail.com",
-          Username : "guerrillateck@gmail.com",
-          Password : "bhavyashishir",
-          To : 'guerrillateck@gmail.com',
-          From : document.getElementById("email").value,
-          Subject : "Information Regarding your Services",
-          Body : "Name"+document.getElementById("name").value+"<br> Email: "+document.getElementById("email").value+"<br> Phone No.: "+document.getElementById("phone").value+"<br> Message: "+document.getElementById("msg").value
-      }).then(
-        message => alert("Message Sent Succesfully.....")
-      );
-      }
-    </script>
   </body>
 </html>
