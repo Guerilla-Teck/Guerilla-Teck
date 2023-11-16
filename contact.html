@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Guerilla Teck Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap');
+    </style>
+  </head>
+  <body>
+    <img src="dotted.png" class="dotted">
+    <div class="Navigation-bar">
+      <div class="company-logo"><img src="gt.jpg" class="logo" alt="Guerilla Teck"></div>
+      <h1>Guerilla Teck</h1>
+    </div>
+    <div class="Contact-form-section">
+      <div class="Contact-form">
+        <div class="Contact-form-input" onsubmit="sendEmail(); reset();return false;">
+          <form action="https://formsubmit.co/guerrillateck@Gmail.com" method="POST">
+            <h2>Name:-</h2>
+            <input id="name"type="text" class="input-area" placeholder="Enter your name..." required>
+            <h2>Mobile No.:-</h2>
+            <input id="phone" type="tel" maxlength="10" class="input-area" placeholder="Enter your Mobile No...." required>
+            <h2>Email ID:-</h2>
+            <input id="email" type="mail" class="input-area" placeholder="Enter your Email ID..." required>
+            <h2>Message:-</h2>
+            <textarea id="msg" rows="8" cols="80" class="msg-area" placeholder="How Can I Help You?"></textarea><br>
+            <button type="submit" class="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <a href="https://wa.link/m0gdt0"><button class="wa-button"><img src="whatsapp.png" class="wa-img"></button></a>
+
+
+    <div class="Contact">
+      <h1>Contact Us</h1>
+      <p>Phone No.:- +91 99589 67946</p><p>Email Address:- <a href="mailto:guerrillateck@gmail.com?subject=Want%20enquire%20about%20the%20prices%20of%20your%20services." style="text-decoration:none;color:white;">guerrillateck@gmail.com</a></p>
+      <h5 style="text-align:center;">© All rights reserved 2023, Guerilla Teck</h5>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+        Email.send({
+          Host : "smtp.gmail.com",
+          Username : "guerrillateck@gmail.com",
+          Password : "bhavyashishir",
+          To : 'guerrillateck@gmail.com',
+          From : document.getElementById("email").value,
+          Subject : "Information Regarding your Services",
+          Body : "Name"+document.getElementById("name").value+"<br> Email: "+document.getElementById("email").value+"<br> Phone No.: "+document.getElementById("phone").value+"<br> Message: "+document.getElementById("msg").value
+      }).then(
+        message => alert("Message Sent Succesfully.....")
+      );
+      }
+    </script>
+  </body>
+</html>
